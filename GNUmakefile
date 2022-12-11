@@ -4,6 +4,7 @@
 # git push
 # https://github.com: <username>
 # https://kimve1969@github.com: <password>
+# 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
 # git config --global credential.helper 'cache --timeout 8640000'
 # git config --global --edit
 
