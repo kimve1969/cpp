@@ -12,16 +12,17 @@ void g(int i){
 }
 
 struct A{
-  A(){}
-  ~A(){}
+  A():mx(0){};
+  ~A(){};
+  long long mx;
 };
 
 int main(int argc, char* argv[]){
   std::cout<<"Start\n";
 
-  for(int i=0; i< 1'000'000; i++){
+  for(int i=0; i< 10'000'000; i++){
     g(i);
-    if(i%5) A a;
+    if(i%5 == 0) A a;
   }
   
   std::cout<<"gvar == "<<gvar<<std::endl;

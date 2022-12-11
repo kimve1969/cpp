@@ -1,32 +1,37 @@
-Berfor install
-   su
-   password
+#1. Befor install BLASPP
+   su #enter password su
    apt update
    
-1. Install python, git
-
-   apt install python
-   apt install git
-
-2. Install CBLAS, OPENBLAS, LAPACK
+#2. Install CBLAS, OPENBLAS, LAPACK and othes...
 
    apt install libblas-dev
    apt install libopenblas-dev
    apt install liblapack-dev
-
-3. Install BLAS++
-
+   
+   apt install python
+   apt install git
+   apt install doxygen
+   
+   exit #exit su
+   
+#3. Install BLAS++ from github
+   
    git clone https://github.com/icl-utk-edu/blaspp
    cd blaspp
    make
+   
+   su #enter password su
    make install
+   exit #exit su
 
-4. See directory /opt/slate
-   /opt/slate/lib/libblaspp.so
-   /opt/slate/pkgconfig/blaspp.pc
-   /opt/slate/include
+   make docs  # documentation available in docs/html/index.html
 
-5. Run all tests from ./blaspp/test/
+#4. See directory /opt/slate
+   /opt/slate/lib/libblaspp.so	# this is BLAS++ library
+   /opt/slate/lib/pkgconfig/blaspp.pc  # this option for gcc
+   /opt/slate/include		       # this is header BLAS++ for gcc
+
+#5. Run all tests from ./blaspp/test/
 
    python run_tests.py
    
