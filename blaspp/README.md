@@ -12,7 +12,7 @@
    apt install git
    apt install doxygen
    
-   exit #exit su
+   exit #exit su	
    
 #3. Install BLAS++ from github
    
@@ -30,6 +30,12 @@
    /opt/slate/lib/libblaspp.so	# this is BLAS++ library
    /opt/slate/lib/pkgconfig/blaspp.pc  # this option for gcc
    /opt/slate/include		       # this is header BLAS++ for gcc
+
+#4.1 Create symbol link for blaspp.pc
+   ln -s /opt/slate/lib/pkgconfig/blaspp.pc /usr/lib/x86_64-linux-gnu/pkgconfig/blaspp.pc
+   # check return:
+   pkg-config --list-all | grep blaspp
+   pkg-config blaspp --cflags
 
 #5. Run all tests from ./blaspp/test/
 
