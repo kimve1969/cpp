@@ -2,10 +2,7 @@
 github \ settings \ developer settings \ personal access tokens
 
 // my token
-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	16/06/2022
-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
-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	11/12/2022
-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
+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	20/12/2022
 
 // set user and mail
 git config --global user.name=kimve1969
