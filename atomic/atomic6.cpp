@@ -3,6 +3,7 @@
 #include<thread>
 #include<chrono>
 
+
 using namespace std::chrono_literals;
 std::atomic<bool> b{false};
 int arr[100'000'000]{0};

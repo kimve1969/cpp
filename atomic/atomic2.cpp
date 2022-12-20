@@ -25,8 +25,7 @@ void print(){
 }
 
 int main(){
-  //b.store( false, std::memory_order_relaxed );
-  
+  //b.store( false, std::memory_order_relaxed );  
   std::thread th1(fill, x);
   std::thread th2(fill, y);
   std::thread th3(fill, z);

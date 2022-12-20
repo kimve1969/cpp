@@ -9,6 +9,7 @@
  print() output 5 snaphots  
 
  *******************/
+
 std::atomic<int> x(0), y(0), z(0);
 std::atomic<bool> b(false);
 //std::memory_order order = std::memory_order_relaxed;

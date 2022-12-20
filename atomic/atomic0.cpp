@@ -1,12 +1,21 @@
+#include<iostream>
 #include<atomic>
+#include<string>
 
-static int v1=0;
-std::atomic<int> v2{0};
+int main(int argc, char *argv[])
+{
+  std::atomic<int> i1{0};
 
-int f1(){
-  return ++v1;
-}
+  // std::atomic<T>::is_always_lock_free is member defined in c++17
+  std::cout<<std::boolalpha<<std::atomic<int>::is_always_lock_free<<"\n";
 
-int f2(){
-  return v2.fetch_add(1, std::memory_order_relaxed);
+  struct A{
+    int a;
+    int b[10];
+    //A(const A&) = delete;
+    //A& operator=(const A&) = delete;
+  };
+  std::cout<<std::boolalpha<<std::atomic<A>::is_always_lock_free<<"\n";
+  
+  return 0;
 }

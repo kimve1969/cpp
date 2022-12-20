@@ -2,7 +2,6 @@
 #include<thread>
 #include<assert.h>
 
-
 std::atomic<bool> x(false), y(false);
 std::atomic<int> z(0);
 

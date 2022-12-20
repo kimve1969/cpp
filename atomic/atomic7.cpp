@@ -2,6 +2,7 @@
 #include<thread>
 #include<atomic>
 
+
 int gint = 0; // concurrent is bad
 //std::atomic<int> gint(0); // concurrent is ok 
 

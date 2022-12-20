@@ -1,31 +1,31 @@
 # auto build files
-atomic_user: atomic_user.cpp
-	g++ atomic_user.cpp -o atomic_user -lstdc++ -pthread -std=c++20
-	./atomic_user
-atomic_wait: atomic_wait.cpp
-	g++ atomic_wait.cpp -o atomic_wait -lstdc++ -pthread -std=c++20
-	./atomic_wait
-atomic2: atomic2.cpp
+9:
+	g++ atomic_user9.cpp -o atomic_user9 -lstdc++ -pthread -std=c++17
+	./atomic_user9
+8:
+	g++ atomic_wait8.cpp -o atomic_wait8 -lstdc++ -pthread -std=c++17
+	./atomic_wait8
+2:
 	g++ atomic2.cpp -o atomic2 -lstdc++ -pthread
 	./atomic2
-atomic7: atomic7.cpp
+7:
 	g++ atomic7.cpp -o atomic7 -lstdc++ -pthread
 	./atomic7
-atomic4: atomic4.cpp
+4:
 	g++ atomic4.cpp -o atomic4 -lstdc++ -pthread
 	./atomic4
-atomic6: atomic6.cpp
+6:
 	g++ atomic6.cpp -o atomic6 -lstdc++ -pthread
 	./atomic6
-atomic3: atomic3.cpp
+3:
 	g++ atomic3.cpp -o atomic3 -lstdc++ -pthread
 	./atomic3
-atomic_spin: atomic_spin.cpp
-	@echo 'build && run...'
-	g++ atomic_spin.cpp -lstdc++ -o atomic_spin -pthread -std=c++20
-	./atomic_spin
-run:
-	./atomic_spin
+1:
+	g++ atomic_spin1.cpp -lstdc++ -o atomic_spin1 -pthread -std=c++17
+	./atomic_spin1
+0:
+	g++ atomic0.cpp -lstdc++ -o atomic0 -pthread -std=c++17
+	./atomic0
 clear:
 	@echo 'remove all *.o files'
 	rm *.o
