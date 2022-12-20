@@ -3,7 +3,7 @@
 	g++ atomic_user9.cpp -o atomic_user9 -lstdc++ -pthread -std=c++17
 	./atomic_user9
 8:
-	g++ atomic_wait8.cpp -o atomic_wait8 -lstdc++ -pthread -std=c++17
+	g++ atomic_wait8.cpp -o atomic_wait8 -lstdc++ -pthread -std=c++20
 	./atomic_wait8
 2:
 	g++ atomic2.cpp -o atomic2 -lstdc++ -pthread
